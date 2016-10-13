@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html 
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+>
+
+<ui:composition template="layout.xhtml">
+	<f:metadata>
+		<f:viewParam name="id" value="#{registroClienteBean.cliente.id}"/>
+
+		<f:viewAction action="#{registroClienteBean.buscar}" if="#{param.id ne null}" />
+	</f:metadata>
+
+	<ui:define name="head">	
+		Registro de clientes
+	</ui:define>
+	
+	<ui:define name="body">
+		<h:form id="form">		
+			<h:panelGroup layout="block" styleClass="form-group">
+				<h:messages 
+					errorClass="alert alert-danger"
+					infoClass="alert alert-info"
+					style="list-style: none; margin: 0; padding: 0"
+				/>
+			</h:panelGroup>
+
+			<h:panelGroup layout="block" styleClass="form-group" rendered="#{registroClienteBean.cliente.id ne null}">
+				<h:outputLabel value="Código: " styleClass="control-label" />
+
+				<h:outputText value=" #{registroClienteBean.cliente.id}" />
+			</h:panelGroup>
+
+			<h:panelGroup layout="block" styleClass="form-group">
+				<h:outputLabel value="Nome: " styleClass="control-label" />
+
+				<h:inputText
+						id="nome"
+						label="Nome"
+						styleClass="form-control"
+						value="#{registroClienteBean.cliente.nome}"
+				/>
+			</h:panelGroup>
+
+			<h:panelGroup layout="block" styleClass="form-group">
+				<h:outputLabel value="E-mail: " styleClass="control-label" />
+
+				<h:inputText
+						id="email"
+						label="E-mail"
+						styleClass="form-control"
+						value="#{registroClienteBean.cliente.email}"
+				/>
+			</h:panelGroup>
+
+			<h:panelGroup layout="block" styleClass="form-group">
+				<h:outputLabel value="Telefone: " styleClass="control-label" />
+
+				<h:inputText
+						id="telefone"
+						label="Telefone"
+						styleClass="form-control"
+						value="#{registroClienteBean.cliente.telefone}"
+				/>
+			</h:panelGroup>
+			
+			<h:commandButton
+				value="Salvar" styleClass="btn btn-primary btn-large"
+				actionListener="#{registroClienteBean.salvar}"
+			/>
+		</h:form>
+	
+	</ui:define>
+</ui:composition>
+</html>
