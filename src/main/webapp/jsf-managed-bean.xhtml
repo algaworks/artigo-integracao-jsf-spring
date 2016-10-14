@@ -15,7 +15,7 @@
 	<ui:define name="body">
 		O problema disso é que não podemos usar os recursos do Spring dentro de um @ManagedBean.
 		<br/>
-		A propriedade "clienteService" está anotada com "@Autowired", mas como não é um bean Spring, então ele não injeta.
+		Por exemplo, a propriedade "clienteService" está anotada com "@Autowired", mas como não é um bean Spring, então ele não injeta.
 		<br/>
 		Veja o que é retornardo quando perguntamos "jsfManagedBean.clienteService eq null": #{jsfManagedBean.clienteService eq null}.
 	</ui:define>
