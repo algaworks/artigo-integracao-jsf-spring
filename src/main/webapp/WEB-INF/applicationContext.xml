@@ -1,13 +1,15 @@
 <beans
     xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:context="http://www.springframework.org/schema/context"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
-	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd"
 >
-    <context:component-scan base-package="com.algaworks.jsfspring" />
-
     <!--
+    ATENÇÃO: Este arquivo aqui não é utilizado. Está no projeto, simplesmente, para demonstrar o uso
+    da configuração do escopo de VIEW através de XML.
+
+    O projeto original está sendo configurado através da classe JsfSpringWebApplicationInitializer.
+    -->
+
     <bean class="org.springframework.beans.factory.config.CustomScopeConfigurer">
         <description>
             Configuração do escopo de VIEW.
@@ -20,5 +22,4 @@
             </map>
         </property>
     </bean>
-    -->
 </beans>
