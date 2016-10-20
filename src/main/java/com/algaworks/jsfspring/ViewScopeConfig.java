@@ -1,6 +1,5 @@
 package com.algaworks.jsfspring;
 
-import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.CustomScopeConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,7 +11,7 @@ import java.util.Map;
 public class ViewScopeConfig {
 
     @Bean
-    public static BeanFactoryPostProcessor beanFactoryPostProcessor() {
+    public static CustomScopeConfigurer customScopeConfigurer() {
         Map<String, Object> scopes = new HashMap<>();
         scopes.put("view", new ViewScope());
 
