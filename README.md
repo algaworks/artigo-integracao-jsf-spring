@@ -1,10 +1,10 @@
-# artigo-jsf-spring
+# artigo-integracao-jsf-spring
 
 Código referente ao artigo para o blog da AlgaWorks
 
 Saiba mais em:
 
-http://blog.algaworks.com/jsf-e-spring
+http://blog.algaworks.com/integrar-jsf-e-spring
 
 ### Rodando o projeto 
 

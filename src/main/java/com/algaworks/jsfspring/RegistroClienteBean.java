@@ -2,12 +2,12 @@ package com.algaworks.jsfspring;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Component;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 
-@Controller
+@Component
 @Scope("view")
 public class RegistroClienteBean {
 
