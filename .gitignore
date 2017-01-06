@@ -1,9 +1,10 @@
-.settings/
 target/
-.idea/
-.DS_Store
+.settings/
 .classpath
 .project
+
+.idea/
+.DS_Store
 tmp
 local.properties
 artigo-jsf-spring.iml
